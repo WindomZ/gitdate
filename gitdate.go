@@ -20,6 +20,11 @@ func main() {
 		Option("-M --month <month>", "date offset +/-number of month").
 		Option("-y --year <year>", "date offset +/-number of year")
 
+	commander.Program.Annotation(
+		"Argument",
+		[]string{commander.FormatDescription("<date>", "two formats: '15:04' or 'now'")},
+	)
+
 	if _, err := commander.Program.Parse(); err != nil {
 		panic(err)
 	}
