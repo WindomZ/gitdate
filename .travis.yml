@@ -1,0 +1,15 @@
+language: go
+
+sudo: false
+
+go:
+  - 1.5.x
+  - 1.6.x
+  - 1.7.x
+  - master
+
+before_install:
+  - github.com/WindomZ/go-commander
+
+script:
+  - go test -v ./...
