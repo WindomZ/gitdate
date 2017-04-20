@@ -8,17 +8,17 @@ import (
 func main() {
 	// gitdate
 	commander.Program.
-		Version("0.0.1")
+		Version("v1.0.5")
 
 	// gitdate [options] <date>
 	commander.Program.
 		Command("<date>").
 		Action(gitdate.DateArgvAction).
-		Option("-m --minute <minute>", "date offset +/-number of minute").
-		Option("-H --hour <hour>", "date offset +/-number of hour").
-		Option("-d --day <day>", "date offset +/-number of day").
-		Option("-M --month <month>", "date offset +/-number of month").
-		Option("-y --year <year>", "date offset +/-number of year")
+		Option("-m --minute <minutes>", "date offset +/-number of minutes").
+		Option("-H --hour <hours>", "date offset +/-number of hours").
+		Option("-d --day <days>", "date offset +/-number of days").
+		Option("-M --month <months>", "date offset +/-number of months").
+		Option("-y --year <years>", "date offset +/-number of years")
 
 	commander.Program.Annotation(
 		"Argument",

@@ -9,7 +9,7 @@ go:
   - master
 
 before_install:
-  - github.com/WindomZ/go-commander
+  - go get gopkg.in/WindomZ/go-commander.v1
 
 script:
   - go test -v ./...
