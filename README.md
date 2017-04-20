@@ -5,7 +5,7 @@
 
 Nothing to say...
 
-![v1.0.3](https://img.shields.io/badge/version-v1.0.3-blue.svg)
+![v1.0.4](https://img.shields.io/badge/version-v1.0.4-blue.svg)
 ![status](https://img.shields.io/badge/status-stable-green.svg)
 
 ## Installation
@@ -14,12 +14,6 @@ To get the package, execute:
 
 ```bash
 go get gopkg.in/WindomZ/gitdate.v1
-```
-
-To import this package, add the following line to your code:
-
-```go
-import "gopkg.in/WindomZ/gitdate.v1"
 ```
 
 ## Usage
@@ -47,6 +41,15 @@ $ gitdate -h
 
   Argument:
     <date>        two formats: '15:04' or 'now'
+```
+
+## Example
+```bash
+$ gitdate 08:22                      # 08:22 today
+$ gitdate 13:45 -d -1                # 13:45 yesterday
+$ gitdate now                        # now, current time
+$ gitdate now -H -3 -m 5             # now, subtract 3 hours, and plus 5 minutes
+$ gitdate now -M -1 -d -2 -H 3 -m 5  # now, subtract 1 month 2 days, and plus 3 hours 5 minutes
 ```
 
 ## License
