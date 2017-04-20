@@ -5,7 +5,7 @@
 
 Nothing to say...
 
-![v1.0.2](https://img.shields.io/badge/version-v1.0.2-blue.svg)
+![v1.0.3](https://img.shields.io/badge/version-v1.0.3-blue.svg)
 ![status](https://img.shields.io/badge/status-stable-green.svg)
 
 ## Installation
