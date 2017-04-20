@@ -54,4 +54,4 @@ $ gitdate now -M -1 -d -2 -H 3 -m 5  # now, subtract 1 month 2 days, and plus 3 
 
 ## License
 
-The [MIT License](https://github.com/WindomZ/gitclone/blob/master/LICENSE)
+The [MIT License](https://github.com/WindomZ/gitdate/blob/dev/LICENSE)
