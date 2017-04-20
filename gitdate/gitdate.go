@@ -1,6 +1,7 @@
 package gitdate
 
 import (
+	"github.com/WindomZ/go-commander"
 	"io/ioutil"
 	"net/http"
 	"strconv"
@@ -27,13 +28,13 @@ func execCommandGitDate(unix int64) error {
 	if err != nil {
 		return err
 	}
-	if _, _, err = pipeCommand("git", "stash"); err != nil {
+	if _, _, err = commander.ExecPipeCommand("git", "stash"); err != nil {
 		return err
 	}
 	defer func() {
-		pipeCommand("git", "stash", "pop")
+		commander.ExecPipeCommand("git", "stash", "pop")
 	}()
-	_, err = execCommandStatement(
+	_, err = commander.ExecStdStatementCommand(
 		strings.Replace(script, "$1",
 			strconv.FormatInt(unix, 10), -1),
 	)
