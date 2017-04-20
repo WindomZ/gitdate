@@ -8,7 +8,7 @@ import (
 func main() {
 	// gitdate
 	commander.Program.
-		Version("0.0.1")
+		Version("v1.0.4")
 
 	// gitdate [options] <date>
 	commander.Program.
