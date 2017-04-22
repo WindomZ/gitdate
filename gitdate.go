@@ -22,7 +22,7 @@ func main() {
 
 	commander.Program.Annotation(
 		"Argument",
-		[]string{commander.FormatDescription("<date>", "two formats: '15:04' or 'now'")},
+		[]string{commander.Format.Description("<date>", "two formats: '15:04' or 'now'")},
 	)
 
 	if _, err := commander.Program.Parse(); err != nil {
