@@ -28,13 +28,13 @@ func execCommandGitDate(unix int64) error {
 	if err != nil {
 		return err
 	}
-	if _, _, err = commander.ExecPipeCommand("git", "stash"); err != nil {
+	if _, _, err = commander.Exec.ExecPipeCommand("git", "stash"); err != nil {
 		return err
 	}
 	defer func() {
-		commander.ExecPipeCommand("git", "stash", "pop")
+		commander.Exec.ExecPipeCommand("git", "stash", "pop")
 	}()
-	_, err = commander.ExecStdStatementCommand(
+	_, err = commander.Exec.ExecStdStatementCommand(
 		strings.Replace(script, "$1",
 			strconv.FormatInt(unix, 10), -1),
 	)
