@@ -45,12 +45,16 @@ $ gitdate -h
 
 ## Example
 ```bash
-$ gitdate 08:22                      # 08:22 today
+$ gitdate 8:22                       # 08:22 today
 $ gitdate 13:45 -d -1                # 13:45 yesterday
 $ gitdate now                        # now, current time
 $ gitdate now -H -3 -m 5             # now, subtract 3 hours, and plus 5 minutes
 $ gitdate now -M -1 -d -2 -H 3 -m 5  # now, subtract 1 month 2 days, and plus 3 hours 5 minutes
 ```
+
+## PowerBy
+
+[go-commander](https://github.com/WindomZ/go-commander) - The solution for building command shell programs
 
 ## License
 
