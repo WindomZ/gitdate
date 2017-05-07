@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Go Report Card](https://goreportcard.com/badge/github.com/WindomZ/gitdate)](https://goreportcard.com/report/github.com/WindomZ/gitdate)
 
-After `commit` and before `push`, the last commit date is just a variable.
+> After `commit` and before `push`, the last commit date is just a variable.
 
 ![v1.0.5](https://img.shields.io/badge/version-v1.0.5-blue.svg)
 ![status](https://img.shields.io/badge/status-stable-green.svg)
@@ -13,7 +13,7 @@ After `commit` and before `push`, the last commit date is just a variable.
 To get the package, execute:
 
 ```bash
-go get gopkg.in/WindomZ/gitdate.v1
+go get github.com/WindomZ/gitdate
 ```
 
 ## Usage
