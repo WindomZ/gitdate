@@ -8,7 +8,7 @@ import (
 func main() {
 	// gitdate
 	commander.Program.
-		Version("v1.0.5")
+		Version("v1.1.0")
 
 	// gitdate [options] <date>
 	commander.Program.
@@ -22,7 +22,7 @@ func main() {
 
 	commander.Program.Annotation(
 		"Argument",
-		[]string{commander.Format.Description("<date>", "two formats: '15:04' or 'now'")},
+		[]string{commander.Format.Description("<date>", "two formats: '15:04' or '15:04:05' or 'now'")},
 	)
 
 	if _, err := commander.Program.Parse(); err != nil {
