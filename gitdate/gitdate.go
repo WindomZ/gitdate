@@ -1,26 +1,39 @@
 package gitdate
 
 import (
+	"errors"
 	"github.com/WindomZ/go-commander"
-	"io/ioutil"
-	"net/http"
 	"strconv"
 	"strings"
+	"time"
 )
 
-const script_url string = "https://gist.githubusercontent.com/WindomZ/18695b33bed478805efe8d384f08b0c4/raw/619230a81d382079e70b873209ae622359beab4c/gitdate"
+var DateArgvAction = func(c commander.Context) error {
+	date, ok := c.GetString("<date>")
+	if !ok || len(date) == 0 {
+		return errors.New("ERROR: <date> should not be empty.")
+	}
 
-func httpGet(url string) (string, error) {
-	resp, err := http.Get(url)
+	offset, err := formatDate(date)
 	if err != nil {
-		return "", err
+		return err
 	}
-	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		return "", err
+
+	if c.Contain("--day") || c.Contain("--month") || c.Contain("--year") {
+		offset = offset.AddDate(c.MustInt("--year"), c.MustInt("--month"), c.MustInt("--day"))
 	}
-	return string(body), nil
+	if i := c.MustInt("--hour"); i != 0 {
+		offset = offset.Add(time.Duration(i) * time.Hour)
+	}
+	if i := c.MustInt("--minute"); i != 0 {
+		offset = offset.Add(time.Duration(i) * time.Minute)
+	}
+
+	if offset.Equal(time.Now()) {
+		return nil
+	}
+
+	return execCommandGitDate(offset.Unix())
 }
 
 func execCommandGitDate(unix int64) error {

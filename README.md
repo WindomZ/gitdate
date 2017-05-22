@@ -5,7 +5,7 @@
 
 > After `commit` and before `push`, the last commit date is just a variable.
 
-![v1.0.5](https://img.shields.io/badge/version-v1.0.5-blue.svg)
+![v1.1.0](https://img.shields.io/badge/version-v1.1.0-blue.svg)
 ![status](https://img.shields.io/badge/status-stable-green.svg)
 
 ## Installation
@@ -40,13 +40,14 @@ $ gitdate -h
     -v --version  output the version number
 
   Argument:
-    <date>        two formats: '15:04' or 'now'
+    <date>        two formats: '15:04' or '15:04:05' or 'now'
 ```
 
 ## Example
 ```bash
 $ gitdate 8:22                       # 08:22 today
 $ gitdate 13:45 -d -1                # 13:45 yesterday
+$ gitdate 13:45:21 -d -1             # 13:45:21 yesterday
 $ gitdate now                        # now, current time
 $ gitdate now -H -3 -m 5             # now, subtract 3 hours, and plus 5 minutes
 $ gitdate now -M -1 -d -2 -H 3 -m 5  # now, subtract 1 month 2 days, and plus 3 hours 5 minutes
