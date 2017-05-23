@@ -57,6 +57,10 @@ $ gitdate now -M -1 -d -2 -H 3 -m 5  # now, subtract 1 month 2 days, and plus 3 
 
 [go-commander](https://github.com/WindomZ/go-commander) - The solution for building command shell programs
 
+## Related
+
+[WindomZ/gitdate.js](https://github.com/WindomZ/gitdate.js) - Written in **Node.js**
+
 ## License
 
 The [MIT License](https://github.com/WindomZ/gitdate/blob/dev/LICENSE)
