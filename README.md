@@ -1,7 +1,8 @@
 # gitdate
+
 [![Build Status](https://travis-ci.org/WindomZ/gitdate.svg?branch=master)](https://travis-ci.org/WindomZ/gitdate)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Go Report Card](https://goreportcard.com/badge/github.com/WindomZ/gitdate)](https://goreportcard.com/report/github.com/WindomZ/gitdate)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 > After `commit` and before `push`, the last commit date is just a variable.
 
@@ -13,7 +14,7 @@
 To get the package, execute:
 
 ```bash
-go get github.com/WindomZ/gitdate
+go get -u github.com/WindomZ/gitdate
 ```
 
 ## Usage
@@ -45,12 +46,12 @@ $ gitdate -h
 
 ## Example
 ```bash
-$ gitdate 8:22                       # 08:22 today
-$ gitdate 13:45 -d -1                # 13:45 yesterday
-$ gitdate 13:45:21 -d -1             # 13:45:21 yesterday
-$ gitdate now                        # now, current time
-$ gitdate now -H -3 -m 5             # now, subtract 3 hours, and plus 5 minutes
-$ gitdate now -M -1 -d -2 -H 3 -m 5  # now, subtract 1 month 2 days, and plus 3 hours 5 minutes
+gitdate 8:22                       # 08:22 today
+gitdate 13:45 -d -1                # 13:45 yesterday
+gitdate 13:45:21 -d -1             # 13:45:21 yesterday
+gitdate now                        # now, current time
+gitdate now -H -3 -m 5             # now, subtract 3 hours, and plus 5 minutes
+gitdate now -M -1 -d -2 -H 3 -m 5  # now, subtract 1 month 2 days, and plus 3 hours 5 minutes
 ```
 
 ## PowerBy
